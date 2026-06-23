@@ -279,7 +279,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
 
       <p class="profile-bio">
-        I am an undergraduate researcher at <a href="#">Nice Lab, SWUFE</a>, supervised by Dr. Wu Wang.
+        I am an undergraduate researcher at <a href="#">Nice Lab, SWUFE</a>, supervised by Dr. Wu Wang. My research focuses on efficient, mathematically-grounded operators for high-resolution visual signal reconstruction — designing structured alternatives to self-attention (frequency-domain gating, invertible spectral sketching) that retain a global receptive field while reducing complexity from O(N²) to O(N log N). I study this primarily through remote sensing image fusion (pansharpening), with results that generalize to general vision tasks such as image classification.
       </p>
 
       <div class="profile-links">
@@ -306,6 +306,10 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       <div class="news-item">
         <span class="news-date">Jun 2026</span>
         <span class="news-text"><strong>Attending ICML 2026</strong> to present our paper on Anisotropic Butterworth Fusion Network. Come find me at the poster session! <span class="tag tag-conf">ICML 2026</span></span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Jun 2026</span>
+        <span class="news-text">Drafting a new manuscript, <strong>PSSNet</strong>, on invertible spectral-sketch operators and Mamba-based degradation-consistency correction for pansharpening.</span>
       </div>
       <div class="news-item">
         <span class="news-date">May 2026</span>
@@ -433,6 +437,20 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
           <span class="tech-tag">FFT</span>
           <span class="tech-tag">Remote Sensing</span>
           <span class="tech-tag">Signal Processing</span>
+          <span class="tech-tag">Python</span>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-top">
+          <span class="proj-name">PSSNet: Spectral-Sketch Mamba Network for Pansharpening</span>
+          <span class="proj-year">2025 – Present · Manuscript in Preparation</span>
+        </div>
+        <p class="proj-desc">A spatial-domain pansharpening framework built around invertible, content-adaptive feature sketching. A dynamic channel-sketching operator projects features into a low-dimensional spectral basis via a matrix-polynomial parameterization orthogonalized through Schulz iteration, paired with a semantic-adaptive anisotropic downsampling scheme that preserves an explicit null-space residual for lossless reconstruction. A degradation-consistency correction module estimates MS/PAN reconstruction residuals and corrects them through a sketch-domain bidirectional Mamba operator. Achieves SOTA on WV3, QB, and GF2 with a markedly lightweight, efficient design.</p>
+        <div class="proj-tech">
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">Mamba</span>
+          <span class="tech-tag">Remote Sensing</span>
+          <span class="tech-tag">Spectral Sketching</span>
           <span class="tech-tag">Python</span>
         </div>
       </div>
