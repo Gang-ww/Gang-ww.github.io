@@ -279,7 +279,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
 
       <p class="profile-bio">
-        I am an undergraduate researcher at <a href="#">Nice Lab, SWUFE</a>, supervised by Dr. Wu Wang. My research focuses on efficient, mathematically-grounded operators for high-resolution visual signal reconstruction — designing structured alternatives to self-attention (frequency-domain gating, invertible spectral sketching) that retain a global receptive field while reducing complexity from O(N²) to O(N log N). I study this primarily through remote sensing image fusion (pansharpening), with results that generalize to general vision tasks such as image classification.
+        I am an undergraduate researcher at <a href="#">Nice Lab, SWUFE</a>, supervised by Dr. Wu Wang. My research centers on efficient, mathematically grounded operators for high-resolution visual reconstruction, with a focus on frequency-domain representation learning, optimization-inspired networks, and representation learning for computer vision and multimodal learning. I study this primarily through remote sensing image fusion (pansharpening), with results that also generalize to broader vision tasks.
       </p>
 
       <div class="profile-links">
@@ -355,7 +355,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
           </div>
           <div class="pub-venue-line">International Conference on Machine Learning (ICML), 2026</div>
           <div class="pub-abstract">
-            We derive a closed-form equivalence between the classical Butterworth low-pass filter and self-attention, replacing O(N²) Softmax attention with an O(N log N) Sigmoid-gated frequency mask. We further extend the isotropic Butterworth to a learnable anisotropic filter with a dynamically oriented elliptical passband for direction-aware spectral modulation. The resulting ABFNet achieves SOTA on three pansharpening benchmarks with only 0.26M parameters.
+            We derive a closed-form equivalence between Butterworth filtering and self-attention, replacing O(N²) Softmax attention with an O(N log N) Sigmoid-gated frequency mask (using log cutoff as Query and filter order as Key). We further extend the isotropic filter to a learnable anisotropic elliptical passband for direction-aware spectral modulation. The resulting method achieves SOTA performance on multiple pansharpening benchmarks and shows strong transferability to broader vision tasks.
           </div>
           <div class="pub-action-links">
             <a class="action-link" href="Butterworth_as_attention.pdf">
@@ -392,9 +392,9 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         </div>
         <div class="exp-org">Nice Lab, SWUFE · Supervisor: Dr. Wu Wang</div>
         <ul class="exp-bullets">
-          <li>Independently proposed the Anisotropic Butterworth Gating (ABG) mechanism, serving as the core operator of ABFNet.</li>
-          <li>Designed the full experiment suite including ablation studies across WV3, QB, GF2, and WV2 datasets.</li>
-          <li>Authored the complete ICML 2026 manuscript and managed the end-to-end submission pipeline.</li>
+          <li>Led the design of novel deep learning architectures for remote sensing image fusion, with a focus on frequency-domain representation learning and optimization-inspired neural networks.</li>
+          <li>Proposed the core algorithms behind ABFNet (ICML 2026) and OSSNet (under review), covering both theory and implementation.</li>
+          <li>Conducted theoretical analysis, model implementation, large-scale experiments, ablation studies, and manuscript preparation.</li>
         </ul>
       </div>
     </div>
@@ -413,12 +413,12 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
       <div class="edu-details">
         <span class="edu-detail">GPA: 86/100</span>
-        <span class="edu-detail">Rank: 35 / 196</span>
-        <span class="edu-detail">CET-4: 550</span>
-        <span class="edu-detail" style="background:#fffbeb;border-color:#fde68a;color:#92400e;">🏅 National Encouragement Scholarship 2025 (Top 3%)</span>
+        <span class="edu-detail">Rank: Top 15% (30/196)</span>
+        <span class="edu-detail">IELTS: Scheduled (Expected Sep 2026)</span>
+        <span class="edu-detail" style="background:#fffbeb;border-color:#fde68a;color:#92400e;">🏅 National Scholarship 2025</span>
         <span class="edu-detail" style="background:#fffbeb;border-color:#fde68a;color:#92400e;">🏅 School-Level Scholarship 2023, 2024</span>
       </div>
-      <div class="edu-courses"><strong>Coursework:</strong> Machine Learning · Deep Learning · Digital Image Processing · Machine Vision · Natural Language Processing · Data Mining · Data Structures · Graph Theory &amp; Applications · Probability Theory · Python Programming</div>
+      <div class="edu-courses"><strong>Relevant Coursework:</strong> Deep Learning · Digital Image Processing · NLP · Machine Learning</div>
     </div>
   </section>
 
@@ -442,13 +442,13 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
       </div>
       <div class="proj-card">
         <div class="proj-top">
-          <span class="proj-name">PSSNet: Spectral-Sketch Mamba Network for Pansharpening</span>
-          <span class="proj-year">2025 – Present · Manuscript in Preparation</span>
+          <span class="proj-name">OSSNet: Orthogonal Spectral-Spatial Sketch Unfolding for Pansharpening</span>
+          <span class="proj-year">2026 – Present · Under Review</span>
         </div>
-        <p class="proj-desc">A spatial-domain pansharpening framework built around invertible, content-adaptive feature sketching. A dynamic channel-sketching operator projects features into a low-dimensional spectral basis via a matrix-polynomial parameterization orthogonalized through Schulz iteration, paired with a semantic-adaptive anisotropic downsampling scheme that preserves an explicit null-space residual for lossless reconstruction. A degradation-consistency correction module estimates MS/PAN reconstruction residuals and corrects them through a sketch-domain bidirectional Mamba operator. Achieves SOTA on WV3, QB, and GF2 with a markedly lightweight, efficient design.</p>
+        <p class="proj-desc">Formulated pansharpening as low-dimensional orthogonal sketch learning via optimization unfolding, significantly reducing computational overhead. Introduced the Legendre Spectral-Gating Sketch, a learnable orthogonal projection operator that dynamically constructs sketch subspaces from Gram covariance using Legendre polynomial recurrence and Schulz orthogonalization. Designed an Adjoint-Guided Data Consistency Compensation module together with explicit Null-Space Residual Recovery, yielding an interpretable degradation-aware reconstruction pipeline grounded in physical observation models. Achieved SOTA performance on multiple pansharpening benchmarks with substantially lower computational cost than existing unfolding-based methods.</p>
         <div class="proj-tech">
           <span class="tech-tag">PyTorch</span>
-          <span class="tech-tag">Mamba</span>
+          <span class="tech-tag">Optimization Unrolling</span>
           <span class="tech-tag">Remote Sensing</span>
           <span class="tech-tag">Spectral Sketching</span>
           <span class="tech-tag">Python</span>
@@ -482,7 +482,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         <div class="skill-chips">
           <span class="skill-chip">Python</span>
           <span class="skill-chip">C++</span>
-          <span class="skill-chip">Bash</span>
+          <span class="skill-chip">Bash/Shell</span>
           <span class="skill-chip">SQL</span>
         </div>
       </div>
@@ -490,9 +490,9 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         <div class="skill-group-name">Frameworks</div>
         <div class="skill-chips">
           <span class="skill-chip">PyTorch</span>
-          <span class="skill-chip">scikit-learn</span>
+          <span class="skill-chip">Scikit-learn</span>
+          <span class="skill-chip">Optimization Unrolling</span>
           <span class="skill-chip">NumPy</span>
-          <span class="skill-chip">Pandas</span>
         </div>
       </div>
       <div class="skill-group">
@@ -501,8 +501,8 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
           <span class="skill-chip">Git</span>
           <span class="skill-chip">Linux</span>
           <span class="skill-chip">LaTeX</span>
-          <span class="skill-chip">Docker</span>
           <span class="skill-chip">Jupyter</span>
+          <span class="skill-chip">SQL</span>
         </div>
       </div>
       <div class="skill-group">
@@ -510,14 +510,14 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         <div class="skill-chips">
           <span class="skill-chip">Ablation Study</span>
           <span class="skill-chip">Academic Writing</span>
-          <span class="skill-chip">Exp. Design</span>
+          <span class="skill-chip">Experiment Design</span>
         </div>
       </div>
       <div class="skill-group">
         <div class="skill-group-name">Architectures</div>
         <div class="skill-chips">
           <span class="skill-chip">ViT / Swin</span>
-          <span class="skill-chip">VMamba</span>
+          <span class="skill-chip">Mamba</span>
           <span class="skill-chip">GAN</span>
           <span class="skill-chip">ResNet</span>
         </div>
@@ -526,7 +526,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); padding:
         <div class="skill-group-name">Languages</div>
         <div class="skill-chips">
           <span class="skill-chip">Mandarin (Native)</span>
-          <span class="skill-chip">English (CET-4 550)</span>
+          <span class="skill-chip">English (IELTS Scheduled)</span>
         </div>
       </div>
     </div>
